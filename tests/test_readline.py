@@ -62,7 +62,7 @@ def test_strings_bracketed(terminal):
 
 def test_early_termination(terminal):
     terminal.current_line().assert_startswith("r$>")
-    terminal.write("stop('!')\x1b\rd = 1\n")
+    terminal.write("Sys.setlocale(category = 'LC_MESSAGES', locale = 'en_US.UTF8'); stop('!')\x1b\rd = 1\n")
     terminal.previous_line(2).assert_startswith("Error")
     terminal.write("d\n")
     terminal.previous_line(2).assert_startswith("Error: object 'd' not found")

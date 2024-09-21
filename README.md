@@ -59,6 +59,22 @@ conda install -c conda-forge radian
 ```
 In this case, it is recommended to install R via conda to ensure consistency in C runtime libraries.
 
+### Note about externally managed environments
+
+Many Unix-based distributions now comply with [PEP-668](https://peps.python.org/pep-0668), which prevents installing python packages outside a virtual environment. To install _radian_ without overriding this behavior, create a virtual environment in your `~/.local` directory with this command:
+
+```sh
+python3 -m venv ~/.local --system-site-packages
+```
+
+Now use the pip3 binary in your `~/.local` folder to install _radian_
+
+```sh
+~/.local/bin/pip3 install radian
+```
+
+Given that `~/.local/bin`, is on your path, you should then be able to execute _radian_ normally.
+
 ## Alias on unix system
 
 You could alias `r` to _radian_ by putting

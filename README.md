@@ -53,6 +53,14 @@ radian
 pip3 install -U git+https://github.com/randy3k/radian
 ```
 
+If you encounter an error `command not found: radian` when trying to run _radian_, you probably need to add the installation location to your PATH. This location should have been flagged for you during the pip3 install process. But the common installation point on Linux and Mac, for example, would require the following: 
+
+```sh
+# below assumes zsh is your default shell; change ".zshrc" to ".bashrc" for vanilla bash shell
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> $HOME/.zshrc
+source $HOME/.zshrc
+```
+
 Alternatively, if you use conda or miniconda,
 ```sh
 conda install -c conda-forge radian

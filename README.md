@@ -172,7 +172,7 @@ options(radian.enable_reticulate_prompt = TRUE)
 # Also, note that some ctrl mappings are reserved. You cannot remap m, i, h, d, or c
 options(
     radian.escape_key_map = list(
-        list(key = "-", value = " <- "),
+        list(key = "-", value = " <- ")
     ),
     radian.ctrl_key_map = list(
         list(key = "right", value = " %>% ")
